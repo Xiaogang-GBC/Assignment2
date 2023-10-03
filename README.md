@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+```markdown
+# Simple NFT Marketplace
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple NFT marketplace built with React, Express.js, and Solidity. This project allows users to mint NFTs by providing an IPFS URL and view the NFTs associated with their Ethereum address.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User authentication via MetaMask
+- Display wallet address of logged-in user
+- Minting new NFTs by providing an IPFS URL
+- Displaying NFTs owned by the user
 
-### `npm start`
+## Setup and Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone the repository**:
+2. **Install dependencies**:
+   npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Configure Environment Variables**:
+   - Create a `.env` file in the project root directory.
+   - Add the following environment variables:
+     REACT_APP_PINATA_API_KEY=yourPinataApiKey
+     REACT_APP_PINATA_API_SECRET=yourPinataApiSecret
 
-### `npm test`
+4. **Run the Express.js server**:
+   node server.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Run the React app**:
+   npm start
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Minting NFTs**:
+   - Click on the "Choose File" button to select a file.
+   - The file will be uploaded to IPFS using Pinata, and a new NFT will be minted with the IPFS URL as the metadata URI.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Viewing NFTs**:
+   - The app will display a list of NFTs owned by the logged-in user.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contract
 
-### `npm run eject`
+The Solidity smart contract code is located in the `contracts/` directory.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Front End
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The front end code is located in the `src/` directory.
